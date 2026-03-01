@@ -1,0 +1,279 @@
+# 个人网站 PRD v1.0（英文站 · Editorial Portfolio）
+
+> 说明：本 PRD 为可执行版本，覆盖目标、结构、交互、视觉风格、内容清单、技术实现与验收标准。任何设计师/开发者/其他AI拿到后应能直接理解并开始落地。
+
+---
+
+## 0. 背景与目标
+
+### 0.1 目的
+搭建一个**全英文**个人网站，以更创意、更美观、更个性化的方式展示个人经历与能力。网站本身要像一个“设计良好、可用性强的产品”，用来支持申请 **PM / Marketing PM 相关实习**，并展示简历无法完整承载的多样经历与知识面。
+
+### 0.2 叙事原则
+- 不强调“转型/转行”，表达为**探索的延展（extension of exploration）**
+- 70% 作品集结构 + 30% 个人叙事气质（有温度、克制、不冷冰冰）
+- International & diverse 是核心特质之一，通过结构与体验自然表达（而非口号式强调）
+
+### 0.3 受众
+- HR / 招聘方（快速扫读）
+- 用人经理（看案例与思考深度）
+- 内推人/同学（快速理解亮点与可转发）
+
+---
+
+## 1. 关键体验目标（UX）
+1. **低操作成本**：用户无需复杂筛选/多次点击即可理解核心信息  
+2. **结构清晰**：多页分类短而干净，避免超长单页  
+3. **信息分层**：默认展示“第一层”，细节用“Read more / Expand”展开  
+4. **视觉不压迫**：米白/暖灰、留白多、排版驱动、轻纹理质感  
+5. **交互克制但记忆点强**：地图为主记忆点，其他动效少而精  
+6. **可持续更新**：后续新增经历/文章时，结构无需重做，仅需新增条目数据  
+
+---
+
+## 2. 站点结构（多页）
+
+网站为多页结构（不做超长单页），固定顶部导航：
+- Home
+- Build
+- Think
+- Explore
+- Contact（弹窗）
+
+不提供下载简历；网站本身承载更丰富内容。无 Privacy 页面。
+
+---
+
+## 3. 页面定义与功能
+
+---
+
+### 3.1 Home（首页 / Identity）
+
+#### 目标
+- 在 30 秒内让访客理解：你是谁、你关注什么、网站的内容入口在哪里
+- 建立气质：editorial、温和、国际化、好奇、克制但有设计感
+
+#### 结构（建议）
+- **Hero（首页第一屏）**
+  - 主标题（大字，Serif，1句）
+  - 极短副标题（1句，解释关注领域：product / AI / markets / people）
+  - 3个入口（Build / Think / Explore）作为清晰导航
+- Credibility 小标签（弱展示，不抢注意力）
+  - 例如：PM Internship / AI Research / 2x Competition Winner（可写但不夸张）
+- 右上角或 header 提供 Contact
+
+#### 交互
+- 点击 Build / Think / Explore → 跳转到对应页面
+- Contact → 弹窗（不跳页）
+
+---
+
+### 3.2 Build（核心作品集页：Product / Marketing / AI）
+
+#### 目标
+展示“能构建什么、怎么思考、怎么落地”，这是最重要页面（面向实习投递）。
+
+#### 信息组织方式
+- **不做折叠大类**（避免额外操作）
+- 大类为 editorial section 标题，下方直接展示项目模块
+- 每个项目默认“短展示”，细节用 “Read more / Expand” 展开（只展开细节，不隐藏主信息）
+
+#### 页面分区（建议）
+A. **Product & Interface**
+- 上海 PM 实习（重点）
+- 自己做的 app 页面（HTML/CSS/JS + UX）
+- UX 课程项目（如与 app 重叠则合并成一个完整案例）
+
+B. **AI & Applied Systems**
+- AI marketing research assistant – Chatbox（重点）
+- AI marketing research assistant – Perception（可简写或放 Think，视内容差异）
+
+C. **Strategy in Practice（精选）**
+- 商业竞赛（至少一个“第一名”详细展示）
+- 另一个竞赛可做简要条目（不展开）
+
+#### 项目模块统一模板（强制统一）
+每个项目（默认折叠前）显示：
+- 项目标题 + 时间
+- 角色（Role）
+- 一句话 summary（你做了什么/解决什么）
+- 2–4 个要点（行动/方法/产出）
+- 1 个结果（若无量化，则用清晰影响描述）
+- “Read more”按钮（展开后显示细节）
+
+展开后（可选字段）：
+- Context / Problem
+- Approach
+- Key decisions & trade-offs
+- Outcome
+- What I learned
+- 相关链接/截图/海报（如能公开）
+
+---
+
+### 3.3 Think（论文与思考页：Game theory / 研究 / 写作）
+
+#### 目标
+展示 intellectual depth 与思考方式，形成差异化；但不能把页面做成学术论文库。
+
+#### 核心原则：长内容做“预览 + 引导”
+论文很长时，不全文贴出。
+
+#### 每篇内容展示结构（建议）
+- 标题
+- 100–150字摘要（英文）
+- 3 个 Key Questions 或 Key Takeaways（bullet）
+- “View full paper / PDF / Poster”链接（打开新页或弹层）
+- 可选：一段开头原文（1段），下面渐隐（fade）提示继续阅读
+
+#### 放入内容（候选）
+- Game theory 论文（重点）
+- AI perception 相关内容（可放这里）
+- Harvard business program 商业竞赛论文/海报（若偏研究可放这里，否则放 Build 的 Strategy）
+
+---
+
+### 3.4 Explore（沉浸式地图页：International & diverse）
+
+#### 目标
+用地图作为强记忆点表达国际经历与多样路径；强调“跨城市/跨系统的探索”，但**不承载详细项目**，避免与 Build/Think 重复。
+
+#### 页面结构（关键）
+- **第一屏：地图占 80%+（80vh–90vh）**
+  - 米白/暖灰 + 轻微纸张纹理
+  - 低对比线稿世界地图
+  - 城市点标记（≤6个，避免噪点）
+  - 极短副标题允许出现（例如一句解释地图意义）
+- **第二屏：极短总结文字（非列表）**
+  - 3–6 行 editorial paragraph，总结每个地点带来的视角/成长
+  - 不重复写 Build/Think 的项目细节
+
+#### 地图交互（最终需求）
+- 桌面端：**hover 到点自动出现信息卡**（无需点击）
+- 移动端：点击点出现信息卡（因为手机无 hover）
+- 信息卡内容（非常短）：
+  - 城市/国家
+  - 标签（如 PM / AI research / program）
+  - 1句描述（不超过两行）
+
+> 注：Explore 不需要地图点跳转到下方列表，不做滚动定位列表。
+
+---
+
+### 3.5 Contact（全站通用弹窗）
+
+#### 目标
+让用户一键获取联系方式并复制，过程简洁。
+
+#### 交互
+- 点击 Contact 打开弹窗
+- 展示：
+  - Email（copy icon）
+  - Phone（copy icon）
+  - LinkedIn/GitHub（跳转）
+- 复制成功提示：
+  - “Copied ✓” 显示 1–2 秒恢复
+- 弹窗可点击遮罩关闭 / ESC 关闭（桌面）
+
+不展示敏感住址信息。
+
+---
+
+## 4. 内容清单（已列经历的归类）
+
+> 未明说地址默认为美国；国际经历必须在 Explore 地图中体现。
+
+### Product / Interface
+- 上海 PM 实习
+- 自己做的 app 页面（HTML/CSS/JS）+ UX（课程）
+
+### AI / Research
+- US AI marketing research assistant（chatbox）
+- US AI marketing research assistant（AI perception）
+- Game theory 论文
+
+### Strategy / Program / Leadership / Competition
+- Panama consulting program
+- US consulting club Board member
+- Deloitte mentorship program
+- Shanghai Harvard business program 商业竞赛论文和海报
+- SZNV 竞赛经历
+- 两个商业竞赛第一名（标题很好听）—至少一个详细展示
+
+**内容筛选建议（V1 控制体量）**
+- Build：精选 4–6 个详细项目（其中至少 1 个 competition 详细）
+- Think：2–3 篇（Game theory 必放）
+- Explore：地点点位 ≤ 6（对应经历聚合描述）
+
+---
+
+## 5. 视觉与UI规范（Clean Editorial）
+
+### 5.1 视觉方向
+- 米白 + 暖灰 + 轻纹理（纸感/颗粒感）
+- 排版驱动：强层级、留白多、阅读像杂志
+- 动效克制：只用于引导理解，不炫技
+
+### 5.2 字体建议（方向）
+- 标题：Serif（书卷/杂志感）
+- 正文：现代 Sans-serif（易读、干净）
+- 全站一致的网格、间距体系
+
+### 5.3 元素风格
+- 少阴影，更多依靠留白与线条
+- 线条细、对比低（特别是地图）
+- 高饱和色禁止，强调色仅用于少量交互状态
+
+---
+
+## 6. 交互说明术语表（面向对接方）
+- **Hero**：每个页面打开后的第一屏（首屏）
+- **Hover**：桌面端鼠标移到元素上触发显示/高亮
+- **Tooltip/信息卡**：hover/click 后出现的小浮层，用于展示短信息
+- **Expand/Read more**：展开隐藏细节，不影响页面结构统一
+
+---
+
+## 7. 技术实现要求（PRD补充）
+
+### 7.1 推荐技术方案（可替换，但需满足要求）
+- 前端：Next.js / React 或 Astro（支持多页、易维护）
+- 样式：自定义 CSS / SCSS 或 Tailwind（需支持 editorial 排版体系）
+- 部署：Vercel / Netlify（静态或SSG优先）
+
+### 7.2 地图实现（强制轻量方案）
+- 使用 **SVG 世界地图**（非 Google Maps / Mapbox / Leaflet）
+- 手动定义点位坐标与内容数据（可 JSON 配置）
+- hover 信息卡用 CSS + JS 控制
+- 移动端 click fallback（点击显示、点击空白关闭）
+
+### 7.3 性能与可用性
+- 图片 WebP/压缩，懒加载
+- 首屏加载速度目标：移动端 LCP ≤ 2.5s（尽量接近）
+- 响应式：桌面/手机适配
+- 可访问性：文本对比度、键盘可用（尤其 Contact 弹窗 ESC 关闭）
+
+### 7.4 可维护性（便于更新）
+- 项目/文章/地点点位采用数据驱动（JSON/MD 文件/简易CMS均可）
+- 新增经历只需新增数据条目，不改页面结构
+
+---
+
+## 8. 验收标准（上线Checklist）
+1. 导航清晰：Home / Build / Think / Explore / Contact 可快速到达  
+2. Contact 弹窗复制功能可用（Email/Phone）  
+3. Explore 地图占首屏 80%+，桌面 hover 能弹出信息卡；移动端点击可展示  
+4. Build 页面不需要筛选操作即可阅读主要经历；项目细节展开逻辑一致  
+5. Think 页面长论文以“摘要+要点+链接”呈现，不出现大段堆叠  
+6. 视觉：米白暖灰、有纹理、留白充足，整体不压迫  
+7. 性能：无明显卡顿、图片加载合理、移动端可用  
+
+---
+
+## 9. V1 范围（建议控制）
+- Home：定稿文案 + 入口  
+- Build：4–6 个案例（至少 1 个 competition 深度）  
+- Think：2–3 篇（Game theory 必放）  
+- Explore：地图点 ≤ 6 + 一段总结  
+- Contact：弹窗复制  
