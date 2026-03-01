@@ -1,0 +1,54 @@
+:root{
+  --bg:#f6f1e8;
+  --text:#1b1b1b;
+  --muted:#6b6b6b;
+  --card:#fbf7f0;
+  --line:rgba(0,0,0,.12);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+.container{max-width:980px;margin:0 auto;padding:48px 20px}
+.nav{
+  position:sticky;top:0;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 20px;border-bottom:1px solid var(--line);
+  background:rgba(246,241,232,.85);backdrop-filter: blur(8px);
+}
+.brand{font-weight:600;text-decoration:none;color:var(--text)}
+.links a,.links button{margin-left:16px}
+.links a{text-decoration:none;color:var(--text)}
+.links a.active{text-decoration:underline}
+.contact{
+  border:1px solid var(--line);background:transparent;
+  padding:8px 12px;border-radius:999px;cursor:pointer;
+}
+.hero h1{font-size:42px;line-height:1.05;margin:40px 0 10px}
+.sub{color:var(--muted);max-width:60ch}
+
+.entry{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+.tile{
+  display:inline-block;padding:14px 16px;border:1px solid var(--line);
+  border-radius:14px;background:var(--card);text-decoration:none;color:var(--text);
+}
+
+.modal.hidden{display:none}
+.modal{
+  position:fixed;inset:0;background:rgba(0,0,0,.25);
+  display:flex;align-items:center;justify-content:center;padding:20px;
+}
+.modal-card{
+  width:min(520px, 100%);background:var(--card);
+  border:1px solid var(--line);border-radius:16px;padding:16px;
+}
+.modal-head{display:flex;justify-content:space-between;align-items:center}
+.close{border:none;background:transparent;font-size:18px;cursor:pointer}
+.row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.copy{border:1px solid var(--line);background:transparent;padding:8px 10px;border-radius:10px;cursor:pointer}
+.modal-foot{display:flex;gap:12px;padding-top:12px}
+.link{text-decoration:none;color:var(--text);border-bottom:1px solid var(--line)}
