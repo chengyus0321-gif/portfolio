@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name — Editorial Portfolio</title>
+  <title>Susan Shen — Editorial Portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+
+<body class="page-home">
   <header class="nav">
-    <a class="brand" href="index.html">Your Name</a>
+    <a class="brand" href="index.html">Susan Shen</a>
+
     <nav class="links">
       <a href="build.html">Build</a>
       <a href="think.html">Think</a>
@@ -17,39 +19,51 @@
     </nav>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <h1>Across cities, across systems.</h1>
-      <p class="sub">An editorial portfolio exploring product, AI, and markets.</p>
+  <main class="container home">
+    <section class="home-grid">
+      <!-- Left: name collage + copy -->
+      <div class="home-left">
+        <img
+          class="name-art"
+          src="assets/images/susan-collage.png"
+          alt="Susan collage name"
+        />
 
-      <div class="entry">
-        <a class="tile" href="build.html">Build →</a>
-        <a class="tile" href="think.html">Think →</a>
-        <a class="tile" href="explore.html">Explore →</a>
+        <p class="home-tagline">Between people and products.</p>
+        <p class="home-focus">Product + AI + Market</p>
+      </div>
+
+      <!-- Right: big buttons -->
+      <div class="home-right">
+        <a class="home-cta" href="build.html">Build</a>
+        <a class="home-cta" href="think.html">Think</a>
+        <a class="home-cta" href="explore.html">Explore</a>
       </div>
     </section>
   </main>
 
-  <!-- Contact Modal -->
+  <!-- Contact Modal (keep) -->
   <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
     <div class="modal-card">
       <div class="modal-head">
         <h2>Contact</h2>
-        <button id="closeBtn" class="close">✕</button>
+        <button id="closeBtn" class="close" aria-label="Close">✕</button>
       </div>
+
       <div class="modal-body">
         <div class="row">
           <span>Email</span>
-          <button class="copy" data-copy="your@email.com">Copy</button>
+          <button class="copy" data-copy="chengyus0321@gmail.com">Copy</button>
         </div>
         <div class="row">
           <span>Phone</span>
-          <button class="copy" data-copy="+1-xxx-xxx-xxxx">Copy</button>
+          <button class="copy" data-copy="+1-949-591-2385">Copy</button>
         </div>
       </div>
+
       <div class="modal-foot">
-        <a href="#" class="link">LinkedIn</a>
-        <a href="#" class="link">GitHub</a>
+        <a class="link" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="link" href="#" target="_blank" rel="noreferrer">GitHub</a>
       </div>
     </div>
   </div>
