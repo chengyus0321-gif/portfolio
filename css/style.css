@@ -165,3 +165,12 @@ body{
   .home-focus{ font-size: 20px; }
 }
 
+.page-home,
+.page-home .nav,
+.page-home .links a,
+.page-home .brand,
+.page-home .home-tagline,
+.page-home .home-focus,
+.page-home .home-cta {
+  font-family: "Libre Baskerville", serif;
+}
