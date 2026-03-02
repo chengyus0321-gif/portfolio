@@ -53,101 +53,113 @@ body{
 .modal-foot{display:flex;gap:12px;padding-top:12px}
 .link{text-decoration:none;color:var(--text);border-bottom:1px solid var(--line)}
 
-/* ---------- Home layout ---------- */
+/* ---------- Home layout (v2: match figma) ---------- */
 .page-home .container.home{
   max-width: 1180px;
-  padding: 70px 28px 90px;
+  padding: 48px 28px 70px;
 }
 
-/* 两列布局：左内容 + 右按钮 */
 .home-grid{
   display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
-  gap: 60px;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 70px;
   align-items: center;
-  min-height: calc(100vh - 84px); /* 扣掉顶部导航高度，确保首屏舒服 */
+  min-height: calc(100vh - 70px);
 }
 
-/* 左侧：拼贴与文案 */
+/* Left */
 .home-left{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
+/* PNG: smaller + left aligned (match fig2) */
 .name-art{
-  width: min(680px, 92%);
+  width: min(560px, 92%); /* 关键：缩小到接近图2的比例 */
   height: auto;
   display: block;
   margin: 0 0 18px 0;
 
-  /* 让拼贴更“融入纸面”，减贴纸感（可删） */
-  filter: contrast(0.97) saturate(0.96);
+  /* 轻微融入纸面：可保留 */
+  filter: contrast(0.98) saturate(0.97);
 }
 
 .home-tagline{
-  margin: 8px 0 6px;
-  color: var(--muted);
+  margin: 6px 0 10px;
   font-size: 22px;
-  line-height: 1.4;
-  letter-spacing: 0.2px;
+  line-height: 1.45;
+  color: rgba(0,0,0,0.45);
 }
 
 .home-focus{
   margin: 0;
-  color: var(--text);
-  font-size: 22px;
-  line-height: 1.4;
-  letter-spacing: 0.2px;
-  opacity: 0.85;
+  font-size: 24px;
+  line-height: 1.45;
+  color: rgba(0,0,0,0.62);
 }
 
-/* 右侧：大按钮 */
+/* Right: paper buttons */
 .home-right{
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 28px;
+
+  /* 让按钮块在右侧居中偏上（更像图2） */
+  justify-content: center;
   align-items: flex-end;
+  transform: translateY(-18px);
 }
 
 .home-cta{
-  width: min(340px, 86%);
+  width: min(360px, 88%);
+  padding: 20px 18px;
   text-align: center;
-  padding: 18px 18px;
-  border-radius: 18px;
-  border: 1px solid var(--line);
-  background: rgba(0,0,0,0.05);
   text-decoration: none;
-  color: var(--text);
+
+  /* 纸张按钮：浅底 + 柔边 + 很轻的阴影 */
+  background: rgba(0,0,0,0.045);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 18px;
+
+  color: rgba(0,0,0,0.55);
   font-size: 22px;
   letter-spacing: 0.2px;
-  transition: transform 120ms ease, background 120ms ease;
+
+  box-shadow:
+    0 1px 0 rgba(0,0,0,0.03),
+    inset 0 1px 0 rgba(255,255,255,0.35);
+
+  transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
 }
 
 .home-cta:hover{
   transform: translateY(-2px);
-  background: rgba(0,0,0,0.075);
+  background: rgba(0,0,0,0.06);
+  border-color: rgba(0,0,0,0.10);
 }
 
-/* 响应式：手机变成上下布局 */
+/* Responsive */
 @media (max-width: 900px){
   .home-grid{
     grid-template-columns: 1fr;
-    gap: 36px;
-    align-items: start;
+    gap: 34px;
     min-height: unset;
   }
 
   .home-right{
     align-items: flex-start;
+    transform: none;
   }
 
   .home-cta{
     width: 100%;
   }
 
-  .home-tagline,
-  .home-focus{
-    font-size: 18px;
+  .name-art{
+    width: min(520px, 100%);
   }
+
+  .home-tagline{ font-size: 18px; }
+  .home-focus{ font-size: 20px; }
 }
