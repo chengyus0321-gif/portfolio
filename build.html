@@ -1,44 +1,429 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Build — Your Name</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <header class="nav">
-    <a class="brand" href="index.html">Your Name</a>
-    <nav class="links">
-      <a href="build.html" class="active">Build</a>
-      <a href="think.html">Think</a>
-      <a href="explore.html">Explore</a>
-      <button id="contactBtn" class="contact">Contact</button>
-    </nav>
-  </header>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Build | Portfolio</title>
 
-  <main class="container">
-    <h1>Build</h1>
-    <p class="sub">Projects will go here (v1).</p>
-  </main>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/main.js"></script>
+  </head>
 
-  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
-    <div class="modal-card">
-      <div class="modal-head">
-        <h2>Contact</h2>
-        <button id="closeBtn" class="close">✕</button>
-      </div>
-      <div class="modal-body">
-        <div class="row"><span>Email</span><button class="copy" data-copy="your@email.com">Copy</button></div>
-        <div class="row"><span>Phone</span><button class="copy" data-copy="+1-xxx-xxx-xxxx">Copy</button></div>
-      </div>
-      <div class="modal-foot">
-        <a href="#" class="link">LinkedIn</a>
-        <a href="#" class="link">GitHub</a>
-      </div>
-    </div>
-  </div>
+  <body>
+    <!-- Header / Nav（你可以替换成 index.html 同款导航） -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">Your Name</a>
 
-  <script src="js/main.js"></script>
-</body>
+        <nav class="nav">
+          <a href="explore.html">Explore</a>
+          <a href="think.html">Think</a>
+          <a class="active" href="build.html">Build</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page">
+      <!-- Hero -->
+      <section class="page-hero">
+        <div class="hero-copy">
+          <h1>Build</h1>
+          <p class="muted">
+            核心作品集页：Product / Marketing / AI（先搭结构，内容你稍后补充）
+          </p>
+        </div>
+
+        <!-- 可选：页内目录 -->
+        <div class="toc">
+          <span class="toc-title muted">On this page</span>
+          <a href="#product-interface">A. Product & Interface</a>
+          <a href="#ai-applied">B. AI & Applied Systems</a>
+          <a href="#strategy-practice">C. Strategy in Practice</a>
+        </div>
+      </section>
+
+      <!-- 工具条：可选 -->
+      <section class="build-toolbar">
+        <button class="btn" type="button" data-action="expand-all">Expand all</button>
+        <button class="btn btn-ghost" type="button" data-action="collapse-all">Collapse all</button>
+      </section>
+
+      <!-- A. Product & Interface -->
+      <section id="product-interface" class="build-section">
+        <header class="section-head">
+          <h2>A. Product & Interface</h2>
+          <p class="muted">上海 PM 实习 / 自己做的 app / UX 课程项目</p>
+        </header>
+
+        <div class="project-list">
+          <!-- 项目模板：重点 -->
+          <article class="project-card" data-project>
+            <details class="project" open="false">
+              <summary class="project-summary">
+                <div class="project-title-row">
+                  <h3 class="project-title">
+                    上海 PM 实习（重点）<span class="meta-dot">·</span>
+                    <span class="project-time">YYYY.MM–YYYY.MM</span>
+                  </h3>
+                  <span class="pill pill-primary">Product</span>
+                </div>
+
+                <div class="project-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">PM Intern</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Summary</span>
+                    <span class="meta-value">一句话：你做了什么 / 解决什么</span>
+                  </div>
+                </div>
+
+                <ul class="project-bullets">
+                  <li>要点 1（行动/方法/产出）</li>
+                  <li>要点 2（行动/方法/产出）</li>
+                  <li>要点 3（可选）</li>
+                </ul>
+
+                <div class="project-result">
+                  <span class="meta-label">Result</span>
+                  <span class="meta-value">1 个结果（量化或清晰影响描述）</span>
+                </div>
+
+                <div class="readmore-row">
+                  <button class="readmore" type="button" data-readmore>
+                    Read more
+                  </button>
+                </div>
+              </summary>
+
+              <div class="project-details">
+                <div class="detail-grid">
+                  <div class="detail-block">
+                    <h4>Context</h4>
+                    <p>（占位）</p>
+                  </div>
+                  <div class="detail-block">
+                    <h4>Problem</h4>
+                    <p>（占位）</p>
+                  </div>
+                  <div class="detail-block">
+                    <h4>Approach</h4>
+                    <p>（占位）</p>
+                  </div>
+                  <div class="detail-block">
+                    <h4>Key decisions & trade-offs</h4>
+                    <p>（占位）</p>
+                  </div>
+                  <div class="detail-block">
+                    <h4>Outcome</h4>
+                    <p>（占位）</p>
+                  </div>
+                  <div class="detail-block">
+                    <h4>What I learned</h4>
+                    <p>（占位）</p>
+                  </div>
+                </div>
+
+                <div class="detail-links">
+                  <a class="link" href="#" target="_blank" rel="noreferrer">相关链接（可公开）</a>
+                  <a class="link" href="#" target="_blank" rel="noreferrer">Figma / Demo / Repo（可选）</a>
+                </div>
+
+                <div class="detail-media">
+                  <!-- 可选：公开截图/海报 -->
+                  <figure class="media">
+                    <img src="assets/images/susan-collage.png" alt="Project preview placeholder" />
+                    <figcaption class="muted">（占位：截图/海报说明）</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </details>
+          </article>
+
+          <!-- 项目模板：自己做的 app -->
+          <article class="project-card" data-project>
+            <details class="project">
+              <summary class="project-summary">
+                <div class="project-title-row">
+                  <h3 class="project-title">
+                    自己做的 App（HTML/CSS/JS + UX）<span class="meta-dot">·</span>
+                    <span class="project-time">YYYY.MM</span>
+                  </h3>
+                  <span class="pill">Interface</span>
+                </div>
+
+                <div class="project-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">Designer / Developer</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Summary</span>
+                    <span class="meta-value">一句话 summary</span>
+                  </div>
+                </div>
+
+                <ul class="project-bullets">
+                  <li>要点 1</li>
+                  <li>要点 2</li>
+                </ul>
+
+                <div class="project-result">
+                  <span class="meta-label">Result</span>
+                  <span class="meta-value">结果描述</span>
+                </div>
+
+                <div class="readmore-row">
+                  <button class="readmore" type="button" data-readmore>Read more</button>
+                </div>
+              </summary>
+
+              <div class="project-details">
+                <div class="detail-grid">
+                  <div class="detail-block"><h4>Context</h4><p>（占位）</p></div>
+                  <div class="detail-block"><h4>Problem</h4><p>（占位）</p></div>
+                  <div class="detail-block"><h4>Approach</h4><p>（占位）</p></div>
+                  <div class="detail-block"><h4>Outcome</h4><p>（占位）</p></div>
+                  <div class="detail-block"><h4>What I learned</h4><p>（占位）</p></div>
+                </div>
+                <div class="detail-links">
+                  <a class="link" href="#" target="_blank" rel="noreferrer">Demo</a>
+                  <a class="link" href="#" target="_blank" rel="noreferrer">Repo</a>
+                </div>
+              </div>
+            </details>
+          </article>
+
+          <!-- UX 课程项目（如与 app 重叠则合并） -->
+          <article class="project-card" data-project>
+            <details class="project">
+              <summary class="project-summary">
+                <div class="project-title-row">
+                  <h3 class="project-title">
+                    UX 课程项目<span class="meta-dot">·</span>
+                    <span class="project-time">YYYY.MM</span>
+                  </h3>
+                  <span class="pill">UX</span>
+                </div>
+
+                <div class="project-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">UX Research / UX Design</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Summary</span>
+                    <span class="meta-value">一句话 summary</span>
+                  </div>
+                </div>
+
+                <ul class="project-bullets">
+                  <li>要点 1</li>
+                  <li>要点 2</li>
+                </ul>
+
+                <div class="project-result">
+                  <span class="meta-label">Result</span>
+                  <span class="meta-value">结果描述</span>
+                </div>
+
+                <div class="readmore-row">
+                  <button class="readmore" type="button" data-readmore>Read more</button>
+                </div>
+              </summary>
+
+              <div class="project-details">
+                <div class="detail-grid">
+                  <div class="detail-block"><h4>Context</h4><p>（占位）</p></div>
+                  <div class="detail-block"><h4>Problem</h4><p>（占位）</p></div>
+                  <div class="detail-block"><h4>Approach</h4><p>（占位）</p></div>
+                  <div class="detail-block"><h4>Outcome</h4><p>（占位）</p></div>
+                  <div class="detail-block"><h4>What I learned</h4><p>（占位）</p></div>
+                </div>
+              </div>
+            </details>
+          </article>
+        </div>
+      </section>
+
+      <!-- B. AI & Applied Systems -->
+      <section id="ai-applied" class="build-section">
+        <header class="section-head">
+          <h2>B. AI & Applied Systems</h2>
+          <p class="muted">AI marketing research assistant – Chatbox（重点）/ Perception（可简写）</p>
+        </header>
+
+        <div class="project-list">
+          <article class="project-card" data-project>
+            <details class="project">
+              <summary class="project-summary">
+                <div class="project-title-row">
+                  <h3 class="project-title">
+                    AI marketing research assistant – Chatbox（重点）
+                    <span class="meta-dot">·</span><span class="project-time">YYYY.MM</span>
+                  </h3>
+                  <span class="pill pill-primary">AI</span>
+                </div>
+
+                <div class="project-meta">
+                  <div class="meta-item"><span class="meta-label">Role</span><span class="meta-value">Role 占位</span></div>
+                  <div class="meta-item"><span class="meta-label">Summary</span><span class="meta-value">一句话 summary</span></div>
+                </div>
+
+                <ul class="project-bullets">
+                  <li>要点 1</li>
+                  <li>要点 2</li>
+                  <li>要点 3（可选）</li>
+                </ul>
+
+                <div class="project-result">
+                  <span class="meta-label">Result</span>
+                  <span class="meta-value">结果描述</span>
+                </div>
+
+                <div class="readmore-row">
+                  <button class="readmore" type="button" data-readmore>Read more</button>
+                </div>
+              </summary>
+
+              <div class="project-details">
+                <div class="detail-grid">
+                  <div class="detail-block"><h4>Context</h4><p>（占位）</p></div>
+                  <div class="detail-block"><h4>Problem</h4><p>（占位）</p></div>
+                  <div class="detail-block"><h4>Approach</h4><p>（占位）</p></div>
+                  <div class="detail-block"><h4>Key decisions & trade-offs</h4><p>（占位）</p></div>
+                  <div class="detail-block"><h4>Outcome</h4><p>（占位）</p></div>
+                  <div class="detail-block"><h4>What I learned</h4><p>（占位）</p></div>
+                </div>
+                <div class="detail-links">
+                  <a class="link" href="#" target="_blank" rel="noreferrer">Demo / Repo / Doc</a>
+                </div>
+              </div>
+            </details>
+          </article>
+
+          <!-- Perception：可简写，默认折叠项也行 -->
+          <article class="project-card" data-project>
+            <details class="project">
+              <summary class="project-summary">
+                <div class="project-title-row">
+                  <h3 class="project-title">
+                    AI marketing research assistant – Perception
+                    <span class="meta-dot">·</span><span class="project-time">YYYY.MM</span>
+                  </h3>
+                  <span class="pill">AI</span>
+                </div>
+
+                <div class="project-meta">
+                  <div class="meta-item"><span class="meta-label">Role</span><span class="meta-value">Role 占位</span></div>
+                  <div class="meta-item"><span class="meta-label">Summary</span><span class="meta-value">一句话 summary</span></div>
+                </div>
+
+                <ul class="project-bullets">
+                  <li>要点 1</li>
+                  <li>要点 2</li>
+                </ul>
+
+                <div class="project-result">
+                  <span class="meta-label">Result</span>
+                  <span class="meta-value">结果描述</span>
+                </div>
+
+                <div class="readmore-row">
+                  <button class="readmore" type="button" data-readmore>Read more</button>
+                </div>
+              </summary>
+
+              <div class="project-details">
+                <div class="detail-grid">
+                  <div class="detail-block"><h4>Context</h4><p>（占位）</p></div>
+                  <div class="detail-block"><h4>Approach</h4><p>（占位）</p></div>
+                  <div class="detail-block"><h4>Outcome</h4><p>（占位）</p></div>
+                </div>
+              </div>
+            </details>
+          </article>
+        </div>
+      </section>
+
+      <!-- C. Strategy in Practice -->
+      <section id="strategy-practice" class="build-section">
+        <header class="section-head">
+          <h2>C. Strategy in Practice</h2>
+          <p class="muted">商业竞赛精选：至少一个第一名详细展示 + 另一个简要条目</p>
+        </header>
+
+        <div class="project-list">
+          <!-- 第一名：详细 -->
+          <article class="project-card" data-project>
+            <details class="project">
+              <summary class="project-summary">
+                <div class="project-title-row">
+                  <h3 class="project-title">
+                    商业竞赛（第一名）（详细展示）
+                    <span class="meta-dot">·</span><span class="project-time">YYYY.MM</span>
+                  </h3>
+                  <span class="pill pill-primary">Strategy</span>
+                </div>
+
+                <div class="project-meta">
+                  <div class="meta-item"><span class="meta-label">Role</span><span class="meta-value">Role 占位</span></div>
+                  <div class="meta-item"><span class="meta-label">Summary</span><span class="meta-value">一句话 summary</span></div>
+                </div>
+
+                <ul class="project-bullets">
+                  <li>要点 1</li>
+                  <li>要点 2</li>
+                  <li>要点 3</li>
+                </ul>
+
+                <div class="project-result">
+                  <span class="meta-label">Result</span>
+                  <span class="meta-value">第一名 + 影响描述（占位）</span>
+                </div>
+
+                <div class="readmore-row">
+                  <button class="readmore" type="button" data-readmore>Read more</button>
+                </div>
+              </summary>
+
+              <div class="project-details">
+                <div class="detail-grid">
+                  <div class="detail-block"><h4>Context</h4><p>（占位）</p></div>
+                  <div class="detail-block"><h4>Problem</h4><p>（占位）</p></div>
+                  <div class="detail-block"><h4>Approach</h4><p>（占位）</p></div>
+                  <div class="detail-block"><h4>Key decisions & trade-offs</h4><p>（占位）</p></div>
+                  <div class="detail-block"><h4>Outcome</h4><p>（占位）</p></div>
+                  <div class="detail-block"><h4>What I learned</h4><p>（占位）</p></div>
+                </div>
+
+                <div class="detail-links">
+                  <a class="link" href="#" target="_blank" rel="noreferrer">公开海报 / Slides（可选）</a>
+                </div>
+              </div>
+            </details>
+          </article>
+
+          <!-- 另一个竞赛：简要条目（不展开也可以） -->
+          <article class="project-card project-compact">
+            <div class="compact-row">
+              <div class="compact-main">
+                <h3 class="project-title">
+                  另一个竞赛（简要条目） <span class="meta-dot">·</span>
+                  <span class="project-time">YYYY.MM</span>
+                </h3>
+                <p class="muted">一两句概述（不展开）</p>
+              </div>
+              <span class="pill">Competition</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <p class="muted">© <span id="year"></span> Your Name</p>
+      </footer>
+    </main>
+  </body>
 </html>
